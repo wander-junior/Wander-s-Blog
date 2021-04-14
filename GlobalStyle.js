@@ -1,5 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+import NunitoRegular from './src/fonts/Nunito-Regular.ttf';
+import NunitoBold from './src/fonts/Nunito-Bold.ttf';
+
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -44,6 +47,21 @@ const GlobalStyle = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
+
+    @font-face {
+		font-family: "Nunito Regular";
+		src: url(${NunitoRegular});
+	}
+
+	@font-face {
+		font-family: "Nunito Bold";
+		src: url(${NunitoBold});
+	}
+
+    body {
+		font-family: 'Nunito Regular';
+	}
+
 `;
 
 const Container = styled.div`

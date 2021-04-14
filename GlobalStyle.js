@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -46,4 +46,18 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
+const Container = styled.div`
+    width: 959px;
+    margin: 0 auto;
+
+    @media (max-width: 960px) {
+        width: 768px;
+    }
+
+    @media (max-width: 770px) {
+        width: 300px;
+    }
+`;
+
 export default GlobalStyle;
+export { Container }

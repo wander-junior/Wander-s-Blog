@@ -1,19 +1,21 @@
 import React from 'react'
 import { Container } from '../../../GlobalStyle'
+import { StyledLink, StyledMenu, SearchItem, StyledHeader } from './header-style'
+import { FaSearch } from 'react-icons/fa';
 
 export default function Header() {
     return (
-        <header>
+        <StyledHeader>
             <Container>
                 <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                        <li>Search</li>
-                    </ul>
+                    <StyledMenu>
+                        <li><StyledLink to='/'>HOME</StyledLink></li>
+                        <li><StyledLink to='/'>ABOUT</StyledLink></li>
+                        <li><StyledLink to='/'>CONTACT</StyledLink></li>
+                        <SearchItem><FaSearch /></SearchItem>
+                    </StyledMenu>
                 </nav>
             </Container>
-        </header>
+        </StyledHeader>
     )
 }

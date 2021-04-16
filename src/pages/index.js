@@ -7,9 +7,10 @@ import globalTheme from "../../globalTheme";
 const IndexPage = () => {
   return (
     <React.Fragment>
-        <ThemeProvider theme={globalTheme}/>
-        <GlobalStyle />
-        <Header />
+        <ThemeProvider theme={globalTheme}>
+          <GlobalStyle />
+          <Header />
+        </ThemeProvider>
     </React.Fragment>
   )
 }

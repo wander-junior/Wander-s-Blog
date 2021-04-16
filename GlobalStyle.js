@@ -60,6 +60,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
 		font-family: 'Nunito Regular';
+        background-color: ${props => props.theme.colors.black.primaryBlack};
 	}
 
 `;

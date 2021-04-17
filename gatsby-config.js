@@ -9,6 +9,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-i18n`,
+      options: {
+        langKeyDefault: 'pt',
+        langKeyForNull: 'pt',
+        prefixDefault: false,
+        useLangKeyLayout: false,
+      },
+    },    
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,

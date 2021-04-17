@@ -9,7 +9,7 @@ const IndexPage = () => {
     <React.Fragment>
         <ThemeProvider theme={globalTheme}>
           <GlobalStyle />
-          <Header lang="pt"/>
+          <Header lang="en"/>
         </ThemeProvider>
     </React.Fragment>
   )

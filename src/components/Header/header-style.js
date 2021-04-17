@@ -36,6 +36,27 @@ const StyledHeader = styled.header`
         margin: 0 auto;
         background: ${props => props.theme.colors.black.tertiaryBlack};
     }
+
+    margin-bottom: 60px;
 `;
 
-export { StyledLink, StyledMenu, SearchItem, StyledHeader };
+const SearchInput = styled.input`
+    visibility: ${props => props.isSearchVisible ? 'hidden' : 'visible'};
+    opacity:  ${props => props.isSearchVisible ? '0' : '1'};
+    transition: all .2s linear;
+    padding: 14px;
+    border: 1px solid ${props => props.theme.colors.black.tertiaryBlack};
+    position: absolute;
+    top: 60px;
+    right: calc((100% - 959px) / 2);
+
+    @media (max-width: 960px) {
+        right: calc((100% - 768px) / 2);
+    }
+
+    @media (max-width: 770px) {
+        right: calc((100% - 300px) / 2);
+    }
+`;
+
+export { StyledLink, StyledMenu, SearchItem, StyledHeader, SearchInput };

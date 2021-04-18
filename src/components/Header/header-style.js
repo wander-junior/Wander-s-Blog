@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import React from 'react';
+import * as React from "react";
 
 const StyledLink = styled(props => <Link {...props} />)`
     font-size: ${props => props.theme.fontSizes.sizetwo};

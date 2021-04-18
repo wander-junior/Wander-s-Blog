@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from "react";
 import { Container } from '../../../GlobalStyle'
 import { StyledLink, StyledMenu, SearchItem, StyledHeader, SearchInput } from './header-style'
 import { FaSearch } from '@react-icons/all-files/fa/FaSearch';

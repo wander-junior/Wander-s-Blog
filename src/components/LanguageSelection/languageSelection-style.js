@@ -4,6 +4,7 @@ import * as React from "react";
 
 const LanguageSelectionContainer = styled.div`
     font-size: ${props => props.theme.fontSizes.sizeFour};
+    margin-top: 60px;
 `;
 
 const Languages = styled.p`

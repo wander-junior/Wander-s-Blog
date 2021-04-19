@@ -31,6 +31,9 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
+        display:flex; 
+        flex-direction:column; 
+
     }
     ol, ul {
         list-style: none;

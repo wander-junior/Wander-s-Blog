@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from 'gatsby';  
+import { Languages, IntText, StyledLink, LanguageSelectionContainer } from './languageSelection-style';
 
 export default function LanguageSelection({lang}) {
     const translatedData = {
@@ -19,19 +19,19 @@ export default function LanguageSelection({lang}) {
     }
 
     return (
-        <div>
-            <p>{translatedData[lang].i18n}</p>
+        <LanguageSelectionContainer>
+            <IntText>{translatedData[lang].i18n}</IntText>
             {lang === 'pt' ? 
-                <div>
-                    <Link to={getTranslatedURL()}>Português</Link>
-                    <span> / English</span>
-                </div>  
-                : 
-                <div>
+                <Languages>
                     <span>Português / </span>
-                    <Link to={getTranslatedURL()}>Inglês</Link>
-                </div>
+                    <StyledLink to={getTranslatedURL()}>English</StyledLink>
+                </Languages>  
+                : 
+                <Languages>
+                    <StyledLink to={getTranslatedURL()}>Português</StyledLink>
+                    <span> / English</span>
+                </Languages>  
             }
-        </div>
+        </LanguageSelectionContainer>
     )
 }

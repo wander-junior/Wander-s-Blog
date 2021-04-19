@@ -8,7 +8,8 @@ const globalTheme = {
         black: {
             primaryBlack: '#FEFDFE',
             secondaryBlack: '#C6C5CA',
-            tertiaryBlack: '#211D2F',
+            tertiaryBlack: '#8F8D96',
+            quaternaryBlack: '#211D2F',
         },
     },
     fontSizes: {

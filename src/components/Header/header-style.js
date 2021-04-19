@@ -4,7 +4,7 @@ import * as React from "react";
 
 const StyledLink = styled(props => <Link {...props} />)`
     font-size: ${props => props.theme.fontSizes.sizetwo};
-    color: ${props => props.theme.colors.black.tertiaryBlack};
+    color: ${props => props.theme.colors.black.quaternaryBlack};
     text-decoration: none;
     margin-right: 30px;
     &:hover {
@@ -34,7 +34,7 @@ const StyledHeader = styled.header`
         width: 100vw;
         height: 1px;
         margin: 0 auto;
-        background: ${props => props.theme.colors.black.tertiaryBlack};
+        background: ${props => props.theme.colors.black.quaternaryBlack};
     }
 
     margin-bottom: 60px;
@@ -45,7 +45,7 @@ const SearchInput = styled.input`
     opacity:  ${props => props.isSearchVisible ? '0' : '1'};
     transition: all .2s linear;
     padding: 14px;
-    border: 1px solid ${props => props.theme.colors.black.tertiaryBlack};
+    border: 1px solid ${props => props.theme.colors.black.quaternaryBlack};
     position: absolute;
     top: 60px;
     right: calc((100% - 959px) / 2);

@@ -12,10 +12,9 @@ export default function LanguageSelection({lang}) {
     }
 
     const getTranslatedURL = () => {
-        const url = typeof window !== 'undefined' ? window.location.href : '';
-        const pos = url.indexOf(process.env.GATSBY_BASE_DOMAIN) + process.env.GATSBY_BASE_DOMAIN.length;
-        if (lang === "pt") return ("en/" + url.slice(pos + 1));
-        return ("/" + url.slice(pos + 4));
+        const url = typeof window !== 'undefined' ? window.location.pathname : '';
+        if (lang === "pt") return (`/en${url}`);
+        return (url.slice(3));
     }
 
     console.log(getTranslatedURL());

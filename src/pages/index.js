@@ -1,19 +1,11 @@
 import * as React from "react"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import GlobalStyle from "../../GlobalStyle";
-import { ThemeProvider } from "styled-components";
-import globalTheme from "../../globalTheme";
+import Layout from "../components/Layout"
+
 
 const IndexPage = () => {
   return (
-    <React.Fragment>
-        <ThemeProvider theme={globalTheme}>
-          <GlobalStyle />
-          <Header lang="pt"/>
-          <Footer lang="pt"/>
-        </ThemeProvider>
-    </React.Fragment>
+    <Layout lang={"pt"}>
+    </Layout>
   )
 }
 

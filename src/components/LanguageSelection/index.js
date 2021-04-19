@@ -16,9 +16,7 @@ export default function LanguageSelection({lang}) {
         if (lang === "pt") return (`/en${url}`);
         return (url.slice(3));
     }
-
-    console.log(getTranslatedURL());
-
+    
     return (
         <LanguageSelectionContainer>
             <IntText>{translatedData[lang].i18n}</IntText>

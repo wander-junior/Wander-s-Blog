@@ -14,24 +14,37 @@ export default function Header({lang}) {
         pt: {
             about: "SOBRE",
             contact: "CONTATO",
-            placeholder: "Pesquise e aperte enter..."
+            placeholder: "Pesquise e aperte enter...",
+            basePath: ''
         }, 
         en: {
             about: "ABOUT",
             contact: "CONTACT",
-            placeholder: "Search and hit enter..."
+            placeholder: "Search and hit enter...",
+            basePath: '/en'
         }
     }
-
 
     return (
         <StyledHeader>
             <Container>
                 <nav>
                     <StyledMenu>
-                        <li><StyledLink to='/'>HOME</StyledLink></li>
-                        <li><StyledLink to='/'>{translatedData[lang].about}</StyledLink></li>
-                        <li><StyledLink to='/'>{translatedData[lang].contact}</StyledLink></li>
+                        <li>
+                            <StyledLink to={`${translatedData[lang].basePath}/`}>
+                                HOME
+                            </StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to={`${translatedData[lang].basePath}/about`}>
+                                {translatedData[lang].about}
+                            </StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to={`${translatedData[lang].basePath}/`}>
+                                {translatedData[lang].contact}
+                            </StyledLink>
+                        </li>
                         <SearchItem>
                             <FaSearch onClick={handleClick}/>
                             <SearchInput

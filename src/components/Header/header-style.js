@@ -31,7 +31,7 @@ const StyledHeader = styled.header`
     &:after {
         content: '';
         display: block;
-        width: 100vw;
+        width: 100%;
         height: 1px;
         margin: 0 auto;
         background: ${props => props.theme.colors.black.quaternaryBlack};

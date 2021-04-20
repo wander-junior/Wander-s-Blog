@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Container } from '../../../GlobalStyle'
+import { AboutTitle, AboutText, LabelLink, StyledLink } from './aboutContainer-style';
 
 export default function AboutContent({lang}) {
     const translatedData = {
@@ -24,29 +25,29 @@ export default function AboutContent({lang}) {
     return (
         <main>
             <Container>
-                <h1>{translatedData[lang].title}</h1>
-                <p>{translatedData[lang].aboutTxt}</p>
+                <AboutTitle>{translatedData[lang].title}</AboutTitle>
+                <AboutText>{translatedData[lang].aboutTxt}</AboutText>
                 <address>
-                    <p>{translatedData[lang].portfolioLabel}
-                        <a href="https://www.wandercruz.com.br" target="_blank" rel="noreferrer">
+                    <LabelLink>{translatedData[lang].portfolioLabel}
+                        <StyledLink href="https://www.wandercruz.com.br" target="_blank" rel="noreferrer">
                             https://www.wandercruz.com.br
-                        </a>
-                    </p>
-                    <p>{translatedData[lang].githubLabel}
-                        <a href="https://github.com/wander-junior" target="_blank" rel="noreferrer">
+                        </StyledLink>
+                    </LabelLink>
+                    <LabelLink>{translatedData[lang].githubLabel}
+                        <StyledLink href="https://github.com/wander-junior" target="_blank" rel="noreferrer">
                             https://github.com/wander-junior
-                        </a>
-                    </p>
-                    <p>{translatedData[lang].linkedinLabel}
-                        <a href="https://github.com/wander-junior" target="_blank" rel="noreferrer">
+                        </StyledLink>
+                    </LabelLink>
+                    <LabelLink>{translatedData[lang].linkedinLabel}
+                        <StyledLink href="https://github.com/wander-junior" target="_blank" rel="noreferrer">
                             https://br.linkedin.com/in/wanderjr-cruz
-                        </a>
-                    </p>
-                    <p>{translatedData[lang].emailLabel}
-                        <a href="mailto:wanderjrcruz96@gmail.com">
+                        </StyledLink>
+                    </LabelLink>
+                    <LabelLink>{translatedData[lang].emailLabel}
+                        <StyledLink href="mailto:wanderjrcruz96@gmail.com">
                             wanderjrcruz96@gmail.com
-                        </a>
-                    </p>
+                        </StyledLink>
+                    </LabelLink>
                 </address>
             </Container>
         </main>

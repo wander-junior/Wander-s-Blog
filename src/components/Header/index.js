@@ -41,7 +41,7 @@ export default function Header({lang}) {
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to={`${translatedData[lang].basePath}/`}>
+                            <StyledLink to={`${translatedData[lang].basePath}/contact`}>
                                 {translatedData[lang].contact}
                             </StyledLink>
                         </li>

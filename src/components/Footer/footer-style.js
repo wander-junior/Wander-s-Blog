@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LinksBackground = styled.footer`
+const LinksBackground = styled.div`
     background-color: ${props => props.theme.colors.purple.primaryPurple};
 `;
 
@@ -30,7 +30,10 @@ const SocialLinks = styled.div`
 `;
 
 const StyledFooter = styled.footer`
-    margin-top: auto; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 235px;
 `;
 
 export { LinksBackground, LinkName, SocialLink, SocialLinks, StyledFooter };

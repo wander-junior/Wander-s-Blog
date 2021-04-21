@@ -66,6 +66,17 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.colors.black.primaryBlack};
 	}
 
+    body {
+        position: relative;
+        min-height:100vh;
+        margin:0; 
+    }
+
+    body::after {
+        content: '';
+        display: block;
+        height: 235px;
+    }
 `;
 
 const Container = styled.div`

@@ -1,15 +1,16 @@
 import * as React from 'react'
+import { StyledLabel, StyledInput, StyledTextarea } from './input-style'
 
 export default function Input({id, label, type}) {
     const isTextarea = type === 'textarea';
     return (
         <React.Fragment>
-            <label for={id}>{label}</label>
+            <StyledLabel for={id}>{label}</StyledLabel>
             {
                 isTextarea ?
-                <textarea id={id}/>
+                <StyledTextarea id={id} rows="6"/>
                 :
-                <input type={type} id={id}/>
+                <StyledInput type={type} id={id}/>
             }
         </React.Fragment>
     )

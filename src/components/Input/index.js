@@ -5,7 +5,7 @@ export default function Input({id, label, type}) {
     const isTextarea = type === 'textarea';
     return (
         <React.Fragment>
-            <StyledLabel for={id}>{label}</StyledLabel>
+            <StyledLabel htmlFor={id}>{label}</StyledLabel>
             {
                 isTextarea ?
                 <StyledTextarea id={id} rows="6"/>

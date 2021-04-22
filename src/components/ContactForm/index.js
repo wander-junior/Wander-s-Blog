@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Container } from '../../../GlobalStyle'
 import Input from '../Input'
-import { StyledForm, FormTitle } from './contactForm-style';
+import { StyledForm, FormTitle, StyledButton } from './contactForm-style';
 
 export default function ContactForm({lang}) {
     const translatedData = {
@@ -21,7 +21,7 @@ export default function ContactForm({lang}) {
                 <Input id="name" label={translatedData[lang].labelName} type="text"/>
                 <Input id="email" label="Email" type="email"/>
                 <Input type="textarea" label={translatedData[lang].labelMessage}/>
-                <button onClick={(e) => e.preventDefault()}>Enviar</button>
+                <StyledButton onClick={(e) => e.preventDefault()}>Enviar</StyledButton>
             </StyledForm>
         </Container>
     )

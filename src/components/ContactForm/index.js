@@ -4,6 +4,7 @@ import { Container } from '../../../GlobalStyle'
 import Input from '../Input'
 import { StyledForm, FormTitle, StyledButton } from './contactForm-style';
 import * as emailjs from 'emailjs-com'; 
+import SentMessage from '../SentMessage';
 
 export default function ContactForm({lang}) {
     const [name, setName] = useState('');
@@ -17,20 +18,12 @@ export default function ContactForm({lang}) {
         pt: {
             labelName: "Nome",
             labelMessage: "Mensagem",
-            warningMessage: "Erro ao enviar. Certifique-se que todos os dados foram inseridos corretamente.",
-            sucessTitle: "Mensagem enviada com sucesso!",
-            sucessMessage: "Sua mensagem foi enviada. Entrarei em contato com você assim que possível.",
-            failTittle: "Erro ao enviar mensagem.",
-            failMessage: "Um erro ocorreu, tente entrar em contato comigo pelo email wanderjrcruz96@gmail.com."
+            warningMessage: "Erro ao enviar. Certifique-se que todos os dados foram inseridos corretamente."
         },
         en: {
             labelName: "Name",
             labelMessage: "Message",
-            warningMessage: "Error while sending. Make sure that all data was entered correctly.",
-            sucessTitle: "Message successfully sent",
-            sucessMessage: "Your message was sent. I will contact you as soon as possible.",
-            failTittle: "Error while sending message.",
-            failMessage: "An error occurred while sending the message. Try to email me at wanderjrcruz96@gmail.com"
+            warningMessage: "Error while sending. Make sure that all data was entered correctly."
         }
     }
 
@@ -72,15 +65,9 @@ export default function ContactForm({lang}) {
         <Container>
             {isSent ? 
                 isSucess ?
-                    <div>
-                        <h1>{translatedData[lang].sucessTittle}</h1>
-                        <p>{translatedData[lang].sucessMessage}</p>
-                    </div>
+                    <SentMessage lang={lang} isSucess={isSucess}/>
                 :
-                    <div>
-                        <h1>{translatedData[lang].failTittle}</h1>
-                        <p>{translatedData[lang].failMessage}</p>
-                    </div>
+                    <SentMessage lang={lang} isSucess={isSucess}/>
             :  
                 <StyledForm>
                     <FormTitle>Contato</FormTitle>

@@ -92,5 +92,15 @@ const Container = styled.div`
     }
 `;
 
+const DefaultGrid = styled.div`
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 15px;
+    
+    @media (max-width: 960px) {
+        grid-template-columns: 1fr;
+    }
+`;
+
 export default GlobalStyle;
-export { Container }
+export { Container, DefaultGrid }

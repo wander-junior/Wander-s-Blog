@@ -19,6 +19,14 @@ const LabelLink = styled.p`
     color: ${props => props.theme.colors.black.quaternaryBlack};
     text-align: center;
     margin-bottom: 6px;
+    @media (max-width: 770px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    };
 `;
 
 const StyledLink = styled.a`

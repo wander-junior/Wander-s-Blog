@@ -12,15 +12,17 @@ export default function ContactForm({lang}) {
     const [message, setMessage] = useState('');
     const [warningMessage, setWarningMessage] = useState('');
     const [isSent, setIsSent] = useState(false);
-    const [isSucess, setIsSucess] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
 
     const translatedData = {
         pt: {
+            title: "Contato",
             labelName: "Nome",
             labelMessage: "Mensagem",
             warningMessage: "Erro ao enviar. Certifique-se que todos os dados foram inseridos corretamente."
         },
         en: {
+            title: "Contact",
             labelName: "Name",
             labelMessage: "Message",
             warningMessage: "Error while sending. Make sure that all data was entered correctly."
@@ -51,10 +53,10 @@ export default function ContactForm({lang}) {
             )
             .then(() => {
                 setIsSent(true);
-                setIsSucess(true);
+                setIsSuccess(true);
             }, () => {
                 setIsSent(true);
-                setIsSucess(false);
+                setIsSuccess(false);
             })
         } else {
             setWarningMessage(translatedData[lang].warningMessage);
@@ -64,13 +66,13 @@ export default function ContactForm({lang}) {
     return (
         <Container>
             {isSent ? 
-                isSucess ?
-                    <SentMessage lang={lang} isSucess={isSucess}/>
+                isSuccess ?
+                    <SentMessage lang={lang} isSuccess={isSuccess}/>
                 :
-                    <SentMessage lang={lang} isSucess={isSucess}/>
+                    <SentMessage lang={lang} isSuccess={isSuccess}/>
             :  
                 <StyledForm>
-                    <FormTitle>Contato</FormTitle>
+                    <FormTitle>{translatedData[lang].title}</FormTitle>
                     <Input 
                         id="name" 
                         label={translatedData[lang].labelName} 

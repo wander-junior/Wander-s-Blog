@@ -11,6 +11,10 @@ const globalTheme = {
             tertiaryBlack: '#8F8D96',
             quaternaryBlack: '#211D2F',
         },
+        others: {
+            green: '#31aa39',
+            red: '#f64540'
+        }
     },
     fontSizes: {
         sizeOne: '0.625rem', // 10px

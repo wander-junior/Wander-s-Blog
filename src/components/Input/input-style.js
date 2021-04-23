@@ -9,6 +9,7 @@ const StyledLabel = styled.label`
 
 const StyledInput = styled.input`
     width: 446px;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 40px;
     font-size: ${props => props.theme.fontSizes.sizeThree};
@@ -28,6 +29,7 @@ const StyledInput = styled.input`
 
 const StyledTextarea = styled.textarea`
     width: 446px;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 40px;
     font-size: ${props => props.theme.fontSizes.sizeThree};

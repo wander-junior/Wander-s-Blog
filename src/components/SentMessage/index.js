@@ -3,7 +3,7 @@ import { StyledFailure, StyledParagraph, StyledSuccess, StyledTitle } from './se
 
 const translatedData = {
     pt: {
-        successTitle: "Mensagem enviada com successo!",
+        successTitle: "Mensagem enviada com sucesso!",
         successMessage: "Sua mensagem foi enviada. Entrarei em contato com você assim que possível.",
         failTitle: "Erro ao enviar mensagem.",
         failMessage: "Um erro ocorreu. Tente entrar em contato comigo pelo email wanderjrcruz96@gmail.com."

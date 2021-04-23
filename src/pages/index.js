@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Container, DefaultGrid } from "../../GlobalStyle"
 import Layout from "../components/Layout"
-
+import BlogDetails from "../components/BlogDetails"
 
 const IndexPage = () => {
   return (
@@ -10,8 +10,7 @@ const IndexPage = () => {
         <DefaultGrid>
           <div>
           </div>
-          <div>
-          </div>
+          <BlogDetails />
         </DefaultGrid>
       </Container>
     </Layout>

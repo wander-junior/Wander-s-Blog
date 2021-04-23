@@ -14,11 +14,11 @@ export default function Footer({lang}) {
                     <SocialLinks>
                         <SocialLink href="https://www.linkedin.com" target="_blank" rel="noreferrer">
                             <FaLinkedinIn style={{fontSize: '40px'}}/>
-                            <LinkName>GitHub</LinkName>
+                            <LinkName>LinkedIn</LinkName>
                         </SocialLink>
                         <SocialLink href="https://www.github.com" target="_blank" rel="noreferrer">
                             <FaGithub style={{fontSize: '40px'}}/>
-                            <LinkName>LinkedIn</LinkName>
+                            <LinkName>GitHub</LinkName>
                         </SocialLink>
                     </SocialLinks>
                 </Container>

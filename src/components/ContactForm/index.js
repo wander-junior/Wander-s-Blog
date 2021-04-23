@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useState } from 'react'
 import { Container } from '../../../GlobalStyle'
 import Input from '../Input'
-import { StyledForm, FormTitle, StyledButton } from './contactForm-style';
+import { StyledForm, FormTitle, StyledButton, StyledWarning } from './contactForm-style';
 import * as emailjs from 'emailjs-com'; 
 import SentMessage from '../SentMessage';
 
@@ -94,7 +94,7 @@ export default function ContactForm({lang}) {
                         handleChange={handleMessage}
                         value={message}
                     />
-                    <div>{warningMessage}</div>
+                    <StyledWarning>{warningMessage}</StyledWarning>
                     <StyledButton onClick={handleClick} type="submit">Enviar</StyledButton>
                 </StyledForm>   
             }

@@ -30,4 +30,11 @@ const StyledButton = styled.button`
     transition: border-color .2s, color .2s;
 `;
 
-export { StyledForm, FormTitle, StyledButton };
+const StyledWarning = styled.div`
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: ${props => props.theme.fontSizes.sizeFour};
+    color: ${props => props.theme.colors.others.red};
+`;
+
+export { StyledForm, FormTitle, StyledButton, StyledWarning };

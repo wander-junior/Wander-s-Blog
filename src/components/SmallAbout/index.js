@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Picture from '../../images/Picture.jpg'
+import { InfoBox, SmallAboutContainer, StyledTitle, StyledParagraph, StyledLink } from './smallAbout-style';
 
 export default function SmallAbout({lang}) {
     const translatedData = {
@@ -17,12 +18,14 @@ export default function SmallAbout({lang}) {
     };
 
     return (
-        <div>
-            <h1>{translatedData[lang].aboutTitle}</h1>
-            <img src={Picture} alt={translatedData[lang].altText}/>
-            <p>{translatedData[lang].aboutParagraph}</p>
-            <p>{translatedData[lang].callPortfolio}</p>
-            <a href="https://wandercruz.com.br">www.wandercruz.com.br</a>
-        </div>
+        <SmallAboutContainer>
+            <StyledTitle>{translatedData[lang].aboutTitle}</StyledTitle>
+            <InfoBox>
+                <img src={Picture} alt={translatedData[lang].altText}/>
+                <StyledParagraph>{translatedData[lang].aboutParagraph}</StyledParagraph>
+                <p>{translatedData[lang].callPortfolio}</p>
+                <StyledLink href="https://wandercruz.com.br">www.wandercruz.com.br</StyledLink>
+            </InfoBox>
+        </SmallAboutContainer>
     )
 }

@@ -4,13 +4,15 @@ import Layout from "../components/Layout"
 import BlogDetails from "../components/BlogDetails"
 
 const IndexPage = () => {
+  const lang = "pt";
+
   return (
-    <Layout lang={"pt"}>
+    <Layout lang={lang}>
       <Container>
         <DefaultGrid>
           <div>
           </div>
-          <BlogDetails />
+          <BlogDetails lang={lang}/>
         </DefaultGrid>
       </Container>
     </Layout>

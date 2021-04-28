@@ -1,10 +1,10 @@
 import * as React from 'react';
 import SmallAbout from '../SmallAbout';
 
-export default function index() {
+export default function BlogDetails({ lang }) {
     return (
         <aside>
-            <SmallAbout />
+            <SmallAbout lang={lang}/>
         </aside>
     )
 }

@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import NunitoRegular from './src/fonts/Nunito-Regular.ttf';
 import NunitoBold from './src/fonts/Nunito-Bold.ttf';
+import RobotoMonoRegular from './src/fonts/RobotoMono-Regular.ttf';
 
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -60,6 +61,11 @@ const GlobalStyle = createGlobalStyle`
 		font-family: "Nunito Bold";
 		src: url(${NunitoBold});
 	}
+
+    @font-face {
+        font-family: "Roboto Mono";
+        src: url(${RobotoMonoRegular});
+    }
 
     body {
 		font-family: 'Nunito Regular';
